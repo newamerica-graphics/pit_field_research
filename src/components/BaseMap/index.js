@@ -1,5 +1,6 @@
 import React from "react";
 import { geoPath, geoEqualEarth, geoAlbersUsa } from "d3-geo";
+import { geoAlbersUsaTerritories } from "d3-composite-projections";
 import { feature } from "topojson-client";
 
 class BaseMap extends React.Component {
@@ -46,7 +47,7 @@ class BaseMap extends React.Component {
       )
         .then(response => response.json())
         .then(us => {
-          const projection = geoAlbersUsa().fitSize(
+          const projection = geoAlbersUsaTerritories().fitSize(
             [this.props.width, this.props.height],
             feature(us, us.objects.states)
           );
