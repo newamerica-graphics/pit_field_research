@@ -40,7 +40,7 @@ const settings = {
     );
   }
 };
-fetch("http://na-data-projects.s3.amazonaws.com/data/pit/field_research.json")
+fetch("https://na-data-projects.s3.amazonaws.com/data/pit/field_research.json")
   .then(response => response.json())
   .then(_data => {
     data = _data;
