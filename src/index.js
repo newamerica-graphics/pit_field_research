@@ -8,9 +8,7 @@ const settings = {
       <div>
         <div className="tooltip__category">
           <div className="tooltip__category__list-item">
-            <span className="tooltip__category__list-item__label">
-              Interviewee:
-            </span>
+            <span className="tooltip__category__list-item__label">Team:</span>
             <span className="tooltip__category__list-item__value">
               {d["interviewee"]}
             </span>
@@ -35,6 +33,8 @@ const settings = {
         width={1000}
         height={600}
         tooltipTemplate={tooltip}
+        title={data.meta[0].title}
+        subtitle={data.meta[0].description}
       />,
       el
     );

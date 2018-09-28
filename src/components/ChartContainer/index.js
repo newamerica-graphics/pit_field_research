@@ -2,7 +2,7 @@ import React from "react";
 import "./ChartContainer.scss";
 
 const Title = props => <h3 className="chart__title">{props.title}</h3>;
-const Subtitle = props => <h4 className="chart__subtitle">{props.subtitle}</h4>;
+const Subtitle = props => <p className="chart__subtitle">{props.subtitle}</p>;
 const Source = props => (
   <span className="chart__source">Source: {props.source}</span>
 );
